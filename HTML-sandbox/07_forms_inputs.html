@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <form action="process.php">
+
+    <!-- Type text -->
+    <div>
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" placeholder="Enter your name"/>
+    </div>
+
+    <!-- Type email -->
+    <div>
+      <label for="email">Email</label><br />
+      <input type="email" name="email" id="email">
+    </div>
+
+    <!-- Textarea -->
+    <div>
+      <label for="message">Message</label><br />
+      <textarea name="message" id="message"></textarea>
+    </div>
+
+    <!-- Select -->
+    <div>
+      <label for="sex">Sex</label><br />
+      <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Type number -->
+    <div>
+      <label for="age">Age</label><br />
+      <input type="number" name="age" id="age">
+    </div>
+
+    <!-- Type date -->
+    <div>
+      <label for="birthdate">Birthdate</label><br />
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+
+    <!-- Radio -->
+    <div>
+      <label for="membership">Membership</label><br />
+      <input type="radio" name="membership" value="simple" id="membership"> Simple
+      <input type="radio" name="membership" value="standard" id="membership"> Standard
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+
+    <!-- Checkbox -->
+    <div>
+      <label for="likes">I like</label><br />
+      <input type="checkbox" name="likes" value="bikes" id="likes"> Bikes
+      <input type="checkbox" name="likes" value="football" id="likes"> Football
+      <input type="checkbox" name="likes" value="cars" id="likes"> Cars
+    </div>
+
+    <!-- <input type="submit" value="Submit"> -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
