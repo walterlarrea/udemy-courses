@@ -10,16 +10,16 @@ exports.protect = asyncHandler(async (req, res, next) => {
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
+    // Set token from Bearer in header
     token = req.headers.authorization.split(' ')[1];
+  } else if (req.cookies.token) {
+    // Set token from cookie
+    token = req.cookies.token;
   }
-
-  // else if(req.cookies.token) {
-  //   token = req.cookies.token
-  // }
 
   // Make sure token exists
   if (!token) {
-    return next(new ErrorResponse('Not authorize to access this route', 401));
+    return next(new ErrorResponse('Not authorized to access this route', 401));
   }
 
   try {
@@ -31,7 +31,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
     next();
   } catch (error) {
     console.error(error);
-    return next(new ErrorResponse('Not authorize to access this route', 401));
+    return next(new ErrorResponse('Not authorized to access this route', 401));
   }
 });
 
