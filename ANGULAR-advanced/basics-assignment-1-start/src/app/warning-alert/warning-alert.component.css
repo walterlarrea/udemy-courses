@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #be0000;
+  color: #fefff4;
+}
+.container::after,
+.container::before {
+  content: none;
+}
+
+.text {
+  font-size: medium;
+}
+
+.title {
+  font-size: large;
+  font-weight: bold;
+  display: block;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
